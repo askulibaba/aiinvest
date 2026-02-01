@@ -13,8 +13,14 @@ class Config:
     # Compliance & Safety
     PROVIDE_GUARANTEES = False
     DISCLOSURE_TEXT = (
-        "This is informational scoring only. No guarantees of returns. "
-        "All deals are opt-in and at participants' own risk."
+        "Informational scoring only. No guarantees of returns or outcomes. "
+        "This agent is an intermediary matching investors and projects, "
+        "not raising funds for itself. All deals are opt-in, at participants' "
+        "own risk, and require explicit consent."
+    )
+    ROLE_TEXT = (
+        "Intermediary only: connects investor-agents with project-agents. "
+        "No custody of funds unless both parties opt into escrow."
     )
 
     # Scoring Settings

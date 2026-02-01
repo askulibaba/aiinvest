@@ -41,6 +41,7 @@ class InvestMatchAgent:
             reply = (
                 f"⚠️ High‑risk flags detected: {', '.join(result.flags)}\n"
                 f"Score: {result.score}/100\n"
+                f"{Config.ROLE_TEXT}\n"
                 f"{Config.DISCLOSURE_TEXT}"
             )
             await self.client.post_comment(post["id"], reply)
@@ -50,6 +51,7 @@ class InvestMatchAgent:
             reply = (
                 f"⛔ Score too low: {result.score}/100\n"
                 f"Reasons: {', '.join(result.reasons) or 'Insufficient data'}\n"
+                f"{Config.ROLE_TEXT}\n"
                 f"{Config.DISCLOSURE_TEXT}"
             )
             await self.client.post_comment(post["id"], reply)
@@ -67,6 +69,7 @@ class InvestMatchAgent:
             f"- Address: {escrow['escrow_address']}\n"
             f"- Amount: {escrow['amount']} {escrow['currency']}\n"
             f"- Terms: {escrow['terms']}\n\n"
+            f"{Config.ROLE_TEXT}\n"
             f"{Config.DISCLOSURE_TEXT}"
         )
         await self.client.post_comment(post["id"], reply)
