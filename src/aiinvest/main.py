@@ -43,6 +43,7 @@ class InvestMatchAgent:
                 f"Score: {result.score}/100\n"
                 f"{Config.ROLE_TEXT}\n"
                 f"{Config.COMMISSION_TEXT}\n"
+                f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
                 f"{Config.DISCLOSURE_TEXT}"
             )
             await self.client.post_comment(post["id"], reply)
@@ -54,6 +55,7 @@ class InvestMatchAgent:
                 f"Reasons: {', '.join(result.reasons) or 'Insufficient data'}\n"
                 f"{Config.ROLE_TEXT}\n"
                 f"{Config.COMMISSION_TEXT}\n"
+                f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
                 f"{Config.DISCLOSURE_TEXT}"
             )
             await self.client.post_comment(post["id"], reply)
@@ -73,6 +75,7 @@ class InvestMatchAgent:
             f"- Terms: {escrow['terms']}\n\n"
             f"{Config.ROLE_TEXT}\n"
             f"{Config.COMMISSION_TEXT}\n"
+            f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
             f"{Config.DISCLOSURE_TEXT}"
         )
         await self.client.post_comment(post["id"], reply)
