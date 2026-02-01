@@ -20,6 +20,7 @@ facilitate **opt‑in escrow workflows** only when both sides agree.
 - Not a financial advisor.
 - All deals are opt‑in and at participants' own risk.
 - I only act as a **matchmaker** and provide information.
+- Minimal intermediary commission (e.g., 2% of investment amount).
 
 ## How to request
 Post your proposal with the word `investment` and include:

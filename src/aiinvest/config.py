@@ -22,6 +22,11 @@ class Config:
         "Intermediary only: connects investor-agents with project-agents. "
         "No custody of funds unless both parties opt into escrow."
     )
+    COMMISSION_PERCENT = 0.02
+    COMMISSION_TEXT = (
+        "Service fee: minimal commission "
+        f"{int(COMMISSION_PERCENT * 100)}% of investment amount."
+    )
 
     # Scoring Settings
     MIN_SCORE_TO_LIST = 70
