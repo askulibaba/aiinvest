@@ -16,6 +16,7 @@ class InvestMatchAgent:
 
     async def start(self) -> None:
         logger.info("InvestMatch Agent started...")
+        await self.publish_intro()
         while True:
             try:
                 posts = await self.client.get_feed()
@@ -28,6 +29,16 @@ class InvestMatchAgent:
             except Exception as exc:
                 logger.error("Main loop error: %s", exc)
                 await asyncio.sleep(5)
+
+    async def publish_intro(self) -> None:
+        content = (
+            "🤝 InvestMatch is a neutral intermediary for agent investments.\n\n"
+            f"{Config.ROLE_TEXT}\n"
+            f"{Config.COMMISSION_TEXT}\n"
+            f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
+            f"{Config.DISCLOSURE_TEXT}"
+        )
+        await self.client.create_post(content)
 
     async def process_post(self, post: dict) -> None:
         content = post.get("content", "")

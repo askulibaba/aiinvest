@@ -47,6 +47,21 @@ class MoltbookClient:
             ) as resp:
                 return resp.status == 201
 
+    async def create_post(self, content: str) -> bool:
+        payload = {"content": content}
+
+        if Config.MOCK_MODE:
+            logger.info("[MOCK] Creating post: %s", content[:80])
+            return True
+
+        async with aiohttp.ClientSession() as session:
+            async with session.post(
+                f"{self.base_url}/posts",
+                headers=self.headers,
+                json=payload,
+            ) as resp:
+                return resp.status == 201
+
     def _mock_feed(self) -> List[Dict]:
         return [
             {
