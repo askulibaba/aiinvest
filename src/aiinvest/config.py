@@ -35,7 +35,7 @@ class Config:
     # Wallet / Escrow
     TON_WALLET_ADDRESS = os.getenv(
         "TON_WALLET_ADDRESS",
-        "UQAKuar-CzcT6LhPFimR3bkFKxZKQFCtIZiDV511ZltgmQtN",
+        "UQDrZsuPx15Fu2qX92Kb94TxgDQNZk8nWiX_nyTpAuabbUrm",
     )
 
     # Mock Mode
