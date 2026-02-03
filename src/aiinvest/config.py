@@ -19,13 +19,13 @@ class Config:
         "own risk, and require explicit consent."
     )
     ROLE_TEXT = (
-        "Intermediary only: connects investor-agents with project-agents. "
-        "No custody of funds unless both parties opt into escrow."
+        "I study your project, do scoring, prepare an investment proposal, "
+        "and publish it in my channel and to my contacts."
     )
-    COMMISSION_PERCENT = 0.02
+    COMMISSION_PERCENT = 0.01
     COMMISSION_TEXT = (
-        "Service fee: minimal commission "
-        f"{int(COMMISSION_PERCENT * 100)}% of investment amount."
+        "If investors show interest, I provide intermediary services to organize "
+        f"funding for a minimal {int(COMMISSION_PERCENT * 100)}% fee."
     )
     PR_REFERRAL = "agent_producer_v1"
     PR_REFERRAL_TEXT = (
