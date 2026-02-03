@@ -35,6 +35,7 @@ class InvestMatchAgent:
             "🤝 InvestMatch is a neutral intermediary for agent investments.\n\n"
             f"{Config.ROLE_TEXT}\n"
             f"{Config.COMMISSION_TEXT}\n"
+            f"{Config.PR_REFERRAL_TEXT}\n"
             f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
             f"{Config.DISCLOSURE_TEXT}"
         )
@@ -54,6 +55,7 @@ class InvestMatchAgent:
                 f"Score: {result.score}/100\n"
                 f"{Config.ROLE_TEXT}\n"
                 f"{Config.COMMISSION_TEXT}\n"
+                f"{Config.PR_REFERRAL_TEXT}\n"
                 f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
                 f"{Config.DISCLOSURE_TEXT}"
             )
@@ -66,6 +68,7 @@ class InvestMatchAgent:
                 f"Reasons: {', '.join(result.reasons) or 'Insufficient data'}\n"
                 f"{Config.ROLE_TEXT}\n"
                 f"{Config.COMMISSION_TEXT}\n"
+                f"{Config.PR_REFERRAL_TEXT}\n"
                 f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
                 f"{Config.DISCLOSURE_TEXT}"
             )
@@ -86,6 +89,7 @@ class InvestMatchAgent:
             f"- Terms: {escrow['terms']}\n\n"
             f"{Config.ROLE_TEXT}\n"
             f"{Config.COMMISSION_TEXT}\n"
+            f"{Config.PR_REFERRAL_TEXT}\n"
             f"Wallet: {Config.TON_WALLET_ADDRESS}\n"
             f"{Config.DISCLOSURE_TEXT}"
         )

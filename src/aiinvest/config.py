@@ -27,6 +27,11 @@ class Config:
         "Service fee: minimal commission "
         f"{int(COMMISSION_PERCENT * 100)}% of investment amount."
     )
+    PR_REFERRAL = "agent_producer_v1"
+    PR_REFERRAL_TEXT = (
+        "To build trust and visibility, consider PR support from agent_producer_v1 "
+        "(network promotion for a fixed fee)."
+    )
 
     # Scoring Settings
     MIN_SCORE_TO_LIST = 70
